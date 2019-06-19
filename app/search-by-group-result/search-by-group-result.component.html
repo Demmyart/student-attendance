@@ -1,0 +1,13 @@
+<div class="wrapper">
+<!-- <input [(ngModel)]="searchText" placeholder="search text goes here"> -->
+<h4>Результат поиска</h4>
+<div *ngFor="let data of searchList | async | filter: searchText; let i = index;">
+  <a routerLink="../StatforgroupComponent">
+  <button class="cards" (click)="getstatbygroup(data)">
+    <div class="lessonname">
+        <p>{{data.lesson_name}}</p>
+    </div>
+  </button>
+</a>
+</div>
+</div>

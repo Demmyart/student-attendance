@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <div class="centerblock">
+    <input type="search" id="mySearch" [(ngModel)]="name" placeholder="Поиск"> 
+    <a routerLink="SearchByGroupResultComponent" routerLinkActive="active">
+      <button (click)="searchByGroup()">Поиск</button></a>
+      <!-- <span class='date'>{{todayDate}}</span> -->
+    </div>
+      <app-userinfo></app-userinfo>
+
+</div>

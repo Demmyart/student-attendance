@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <div>
+        <h4>Загрузите расписание</h4>
+    <div class="form-group">
+        <label for="file" class="custom-file-upload">Выберите файл</label>
+        <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+        <button class="btn" (click)="sendSchedule()">Отправить</button>
+    </div>
+    </div>
+    <h4>Количество учащихся в аудиториях</h4>
+  <div *ngFor="let data of list; let i = index;">
+    <button  class ="cards">
+    <div class ="time">
+        <span class="titleles">Время</span><br/>
+           <p> {{data.start}}<br/>
+            {{data.end}}</p>
+    </div>
+    <div class="lessonname">
+    <span class="titleles">Учеников:</span>
+     <p>{{data.quantity}}</p>
+    </div>
+
+    <div class="cab">
+      <span class="titleles">Аудитория</span><br/>
+      <p>{{data.name}}</p></div>
+  </button>
+  </div>
+  </div>

@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <h4>Календарь</h4>
+  <form #myForm="ngForm" novalidate>
+    <my-date-picker name="mydate" 
+    [options]="myDatePickerOptions"
+    (dateChanged)="onDateChanged($event)"
+     required>
+    </my-date-picker>
+  </form>
+  <!-- <a *ngIf="type==='teacher'" routerLink="LessonListComponent" routerLinkActive="active"><button (click)="getData()">OK</button></a> -->
+  <!-- <a *ngIf="type==='student'" routerLink="LessonliststudentComponent" routerLinkActive="active"><button (click)="getData()">OK</button></a> -->
+</div>

@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="divTableCell">
+    <h4>Общая посещаемость</h4>
+    <pie-chart *ngIf="config1" [data]="data1" [config]="config1" [elementId]="elementId1">
+    </pie-chart>
+  </div>
+  <h4>Новости</h4>
+  <div class='news' *ngFor='let article of news?.articles;let i=index;'>
+   <div class='cards' (click)="redirect(i)">
+        <img src="{{article.urlToImage}}" style= "width:100%; height:120px; border-radius:15px;"> 
+        <div class='photo'> </div>
+    </div>
+  </div>
+  <button (click)="exit()">Выход</button>
+</div>  

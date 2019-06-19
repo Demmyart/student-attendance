@@ -1,0 +1,33 @@
+ <div class="wrapper">
+
+<router-outlet></router-outlet>
+ <!-- <div *ngIf="!buttonClicked">
+  <div *ngFor="let data of data; let i = index;">
+  <button (click)="getLessonInfo(i)"><p>{{data.lesson_name}}</p></button>
+  <p>{{data.classroom_name}}</p>
+  <p>{{data.start}}</p>
+  <p>{{data.end}}</p>
+</div>
+
+</div>
+
+<div *ngIf="buttonClicked">
+    <p>Загрузите фотографию со студентами:</p>
+    <div class="form-group">
+        <label for="file">Choose File</label>
+        <input type="file"
+               id="file"
+               (change)="handleFileInput($event.target.files)">
+               <button (click)="sendPhoto()">SEND PHOTO</button>
+    </div>
+    
+    <div *ngFor="let student of studentList | slice:1; let i=index;">
+    <p>{{student.name}} - {{student.surname}} - {{student.last_name}}
+        <button class="btn" (click)="studentIsHere()">Отметить</button> </p>
+    </div>
+</div> 
+<app-lesson-list></app-lesson-list>
+<app-lesson-info></app-lesson-info>
+ <app-search-by-group-result></app-search-by-group-result>
+ -->
+</div> 

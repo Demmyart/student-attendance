@@ -1,0 +1,27 @@
+.wrapper{
+    z-index: 1;
+    width: 20%;
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    text-align: center;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(45deg, #414345, #232526); 
+    background: linear-gradient(45deg, #414345, #232526);
+    -webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+mydatepicker{
+    width: 100%;
+}
+h4{
+    font-family:'NotoSans';
+    color: rgb(174, 174, 174);
+}

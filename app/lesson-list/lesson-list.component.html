@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <h4>Расписание</h4>
+  <div *ngIf="lessonList">
+      <div class="box" *ngIf="loader | async">
+          <div class="clock"></div>
+      </div>
+      <div *ngIf="!(loader | async)" >
+<div *ngFor="let data of lessonList | async | sort:'start'; let i = index;">
+  <a routerLink="../LessonInfoComponent">
+  <button  class ="cards" (click)="getLessonInfo(data)">
+  <div class ="time">
+      <span class="titleles">Время</span><br/>
+         <p> {{data.start}}<br/>
+          {{data.end}}</p>
+  </div>
+  <div class="lessonname">
+   <p>{{data.lesson_name}}</p>
+    <div class="teacher">
+        <span class="titleles">Преподаватель:</span>
+      {{data.surname}} {{data.name}} {{data.last_name}}  </div>
+  </div>
+  
+  <div class="cab">
+    <span class="titleles">Аудитория</span><br/>
+    <p>{{data.classroom_name}}</p></div>
+</button>
+</a>
+</div>
+</div>
+</div>
+</div>

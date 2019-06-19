@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'NotoSans';
+    src: url('/assets/fonts/NotoSans.eot') format('embedded-opentype'),  
+    url('/assets/fonts/NotoSans.woff') format('woff'),
+    url('/assets/fonts/NotoSans-Regular.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+

@@ -1,0 +1,12 @@
+<div class="wrapper">
+    <h4>Статистика группы</h4>
+
+<div class="box" *ngIf="loader | async">
+    <div class="clock"></div>
+</div>
+<div *ngIf="!(loader | async)" >
+<div class = "students" *ngFor="let student of list | async; let i=index;">
+<p>{{student.surname}} {{student.name}}  {{student.last_name}} - {{student.total}}%</p>
+</div>
+</div>
+</div>

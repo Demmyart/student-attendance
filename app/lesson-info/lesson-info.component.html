@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <h4>Информация о занятии</h4>
+
+<p>Загрузите фотографию со студентами:</p>
+<div class="form-group">
+    <label for="file" class="custom-file-upload">Выберите файл</label>
+    <input type="file"
+           id="file"
+           (change)="handleFileInput($event.target.files)">
+           <button class="btn" (click)="sendPhoto()">Отправить</button>
+</div>
+<div class="box" *ngIf="loader | async">
+    <div class="clock"></div>
+</div>
+<div *ngIf="!(loader | async)" >
+<div class = "students" *ngFor="let student of lessonInfoList | async; let i=index;">
+<p>{{student.surname}} {{student.name}}  {{student.last_name}}
+    <span>
+    <button class="button tick"  [disabled]="student.processing" (click)="studentIsHere(student);"></button>
+    <button class="button cross" [disabled]="student.processing" (click)="studentIsNotHere(student)"></button> 
+    </span> 
+    <span>
+        <span class="tick1" *ngIf="student.here ===1" ></span>
+        <span class="cross1" *ngIf="student.here ===0" ></span> 
+    </span> 
+</p>
+</div>
+</div>
+</div>

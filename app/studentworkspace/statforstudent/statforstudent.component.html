@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <h4>Посещаемость по предмету</h4>
+<div *ngIf="stat" class="overall">
+    <div class="box" *ngIf="loader | async">
+        <div class="clock"></div>
+    </div>
+    <div *ngIf="!(loader | async)" >
+<div *ngFor="let stat of stat | async ">
+  <p class="name">{{stat.surname}}  {{stat.name}}  {{stat.last_name}}</p>  
+  <span class="percent">{{stat.total}}%</span>
+</div>
+<div class="divTableCell">
+  <pie-chart  *ngIf="config2" [data]="data2" [config]="config2" [elementId]="elementId2"></pie-chart>
+</div>
+</div>
+</div>
+
+</div>

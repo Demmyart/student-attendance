@@ -1,0 +1,14 @@
+<div class='login'  *ngIf="!loggedIn()">
+  <form id="form" valide>
+  <p><input type="text" [(ngModel)]="user.username" name="username"  placeholder="Login"></p>
+  <p><input type="password" [(ngModel)]="user.password" name="password"  placeholder="Password"></p>
+  <p><input type="submit" form="form" value="Войти" (click)="onLoginSubmit()"></p>
+
+  </form>
+  <div *ngIf="errorMessage" style="background-color: rgba(0, 0, 0, 0);">{{errorMessage}}</div>
+</div>
+<div class="toolbar" *ngIf="loggedIn()">
+  <p><span class="icon"><img src="./assets/img/head.jpg" style="width:100px; height:100px; border-radius: 50%; border: 0px solid white;"></span></p>
+  <p><span class="user" style="font-family:Playfair Display SC, serif;font-size: 14px; font-weight: 400;">{{authService.user}}</span></p>
+  <p><input type="submit" form="form" (click)="logout()" value="Выйти"></p>
+</div>
