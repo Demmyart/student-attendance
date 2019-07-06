@@ -6,7 +6,6 @@
 * MySQL
 * Flask
 
-![](https://i.imgur.com/qld2tkm.jpg)
 ![](https://i.imgur.com/sQ3jT3w.jpg)
 ![](https://i.imgur.com/PXhdgVw.png)
 ![](https://i.imgur.com/Jil4mWr.jpg)
